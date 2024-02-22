@@ -17,6 +17,7 @@
 		C1BC9A372B86E3980083E181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A362B86E3980083E181 /* User.swift */; };
 		C1BC9A3B2B86E90F0083E181 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A3A2B86E90F0083E181 /* UserViewModel.swift */; };
 		C1BC9A3E2B86ED620083E181 /* NumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A3D2B86ED620083E181 /* NumberViewModel.swift */; };
+		C1BC9A402B870FD50083E181 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A3F2B870FD50083E181 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C1BC9A362B86E3980083E181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C1BC9A3A2B86E90F0083E181 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C1BC9A3D2B86ED620083E181 /* NumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewModel.swift; sourceTree = "<group>"; };
+		C1BC9A3F2B870FD50083E181 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C1BC9A382B86E3C80083E181 /* Model */,
 				C1BC9A1F2B86D8370083E181 /* AppDelegate.swift */,
 				C1BC9A212B86D8370083E181 /* SceneDelegate.swift */,
+				C1BC9A3F2B870FD50083E181 /* Observable.swift */,
 				C1BC9A252B86D8370083E181 /* Main.storyboard */,
 				C1BC9A282B86D8390083E181 /* Assets.xcassets */,
 				C1BC9A2A2B86D8390083E181 /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BC9A402B870FD50083E181 /* Observable.swift in Sources */,
 				C1BC9A242B86D8370083E181 /* ViewController.swift in Sources */,
 				C1BC9A3B2B86E90F0083E181 /* UserViewModel.swift in Sources */,
 				C1BC9A202B86D8370083E181 /* AppDelegate.swift in Sources */,

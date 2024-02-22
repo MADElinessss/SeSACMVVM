@@ -8,29 +8,44 @@
 import Foundation
 
 class NumberViewModel {
+    // MARK: DidSet으로 값 변경 감지
+//    var inputText: String? = "" {
+//        didSet {
+//            numberValidation()
+//        }
+//    }
+    var inputText = Observable("🐢")// 여기부터 다시해
     
-    func numberValidation(_ inputText: String?) -> String {
-        guard let text = inputText else { return "" }
+    // MARK: Observable로 값 변경 감지
+    var outputResult = Observable("🐶")
+    
+    init() {
+        inputText.bind { value in // value: inputText.text
+            self.numberValidation(value)
+        }
+    }
+    
+    private func numberValidation(_ text: String) {
+        // let text = inputText.text
+        // guard let text = inputText else { return }
         // 1. 빈값 처리
         if text.isEmpty {
-            return "값을 입력해주세요."
+            outputResult.text = "값을 입력해주세요."
         }
         // 2. 문자열 예외처리
         guard let num = Int(text) else {
-            return "숫자만 입력해주세요."
+            outputResult.text = "숫자만 입력해주세요."
+            return
         }
-        
         // 3. 숫자 쉼표처리
-        if num > 0, num <= 1000000 {
+        if num > 0, num <= 10000000 {
             let format = NumberFormatter()
             format.numberStyle = .decimal // 숫자 쉼표 처리
             if let result = format.string(for: num) {
-                return "\(result) 원"
+                outputResult.text = "\(result) 원"
             }
         } else {
-            return "백만원 이하로 입력해주세요."
+            outputResult.text = "천만원 이하로 입력해주세요."
         }
-        
-        return ""
     }
 }
