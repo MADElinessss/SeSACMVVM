@@ -8,21 +8,21 @@
 import Foundation
 
 // 실시간으로 달라지는 데이터를 감지
-class Observable {
+class Observable<T> {
     
-    private var closure: ((String) -> Void)?
+    private var closure: ((T) -> Void)?
     
-    var value: String {
+    var value: T {
         didSet {
             closure?(value)
         }
     }
     
-    init(_ value: String) {
+    init(_ value: T) {
         self.value = value
     }
     
-    func bind(_ closure: @escaping (String) -> Void) {
+    func bind(_ closure: @escaping (T) -> Void) {
         print("bind")
         closure(value)
         self.closure = closure
