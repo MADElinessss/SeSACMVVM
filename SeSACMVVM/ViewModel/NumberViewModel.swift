@@ -30,11 +30,11 @@ class NumberViewModel {
         // guard let text = inputText else { return }
         // 1. 빈값 처리
         if text.isEmpty {
-            outputResult.text = "값을 입력해주세요."
+            outputResult.value = "값을 입력해주세요."
         }
         // 2. 문자열 예외처리
         guard let num = Int(text) else {
-            outputResult.text = "숫자만 입력해주세요."
+            outputResult.value = "숫자만 입력해주세요."
             return
         }
         // 3. 숫자 쉼표처리
@@ -42,10 +42,10 @@ class NumberViewModel {
             let format = NumberFormatter()
             format.numberStyle = .decimal // 숫자 쉼표 처리
             if let result = format.string(for: num) {
-                outputResult.text = "\(result) 원"
+                outputResult.value = "\(result) 원"
             }
         } else {
-            outputResult.text = "천만원 이하로 입력해주세요."
+            outputResult.value = "천만원 이하로 입력해주세요."
         }
     }
 }

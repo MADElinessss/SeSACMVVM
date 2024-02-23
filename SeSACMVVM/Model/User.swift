@@ -14,13 +14,13 @@ struct User {
 
 class Food {
     
-    private var closure: (() -> Void)?// 1. 전체를 옵셔널로 -> 왜,,?
+    private var closure: ((String) -> Void)?// 1. 전체를 옵셔널로 -> 왜,,?
     
     // 인스턴스 프로퍼티
     var name: String { // 중괄호 있지만 연산 프로퍼티는 아니지
         didSet { // 초기화때는 실행X, 값이 바뀔때마다 실행됨!
             print("☕️")
-            closure?()// 2. 클로저 전체 옵셔널이니까 옵셔널 체이닝
+            closure?(name)// 2. 클로저 전체 옵셔널이니까 옵셔널 체이닝
         }
     }
     
@@ -29,10 +29,10 @@ class Food {
     }
     
     // 4. 얘를 넣어보자
-    func test(_ closure: @escaping () -> Void) {
+    func test(_ example: @escaping (String) -> Void) {
         print("Food class - test")
-        closure() // 🥟
-        self.closure = closure
+        example(name) // 🥟
+        closure = example
     }
     
 }
