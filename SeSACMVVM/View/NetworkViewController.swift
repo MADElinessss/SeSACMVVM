@@ -10,10 +10,10 @@ import UIKit
 
 class NetworkViewController: UITableViewController {
     
-    var list: [Market] = []
-    
     let viewModel = NetworkViewModel()
 
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 네트워크 요청 -> response -> codable -> list에 append -> 뷰
@@ -24,6 +24,9 @@ class NetworkViewController: UITableViewController {
     func bindData() {
         viewModel.ourpurMarketData.bind { market in
             self.tableView.reloadData()
+        }
+        viewModel.outputLabel.bind { value in
+            self.resultLabel.text = value
         }
     }
     

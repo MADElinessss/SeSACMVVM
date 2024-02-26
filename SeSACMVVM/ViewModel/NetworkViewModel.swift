@@ -16,6 +16,8 @@ class NetworkViewModel {
     // list
     var ourpurMarketData: Observable<[Market]> = Observable([])
     
+    var outputLabel = Observable("")
+    
     init() {
         inputViewDidLoadTrigger.bind { _ in
             self.callRequest()
@@ -29,6 +31,7 @@ class NetworkViewModel {
             switch response.result {
             case .success(let success):
                 self.ourpurMarketData.value = success
+                self.outputLabel.value = success[0].korean_name
             case .failure(let failure):
                 print("🚨")
             }

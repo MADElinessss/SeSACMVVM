@@ -264,6 +264,9 @@
                             <outlet property="delegate" destination="6Il-St-VIb" id="cV6-l5-mlz"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="resultLabel" destination="ygP-gi-DI7" id="2b4-Oh-GAj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rv0-Hq-aP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
