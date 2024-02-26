@@ -25,6 +25,29 @@ class UserViewModel {
     
     // 애초에 뷰모델에서 리스트에 데이터 넣기
     init() {
+        transform()
+    }
+    
+    var numberOfRowsInSection: Int {
+        return list.value.count
+    }
+    
+    // indexPath.row 매개변수
+    func cellForRowAt(_ indexPath: IndexPath) -> User {
+        return list.value[indexPath.row]
+    }
+    
+    private func fetchUser() {
+        list.value = [User(name: "Madeline", age: 27),
+                      User(name: "Moana", age: 26),
+                      User(name: "Musk", age: 24),
+                      User(name: "A", age: 29),
+                      User(name: "B", age: 30)]
+    }
+    
+    // 굳이 하나로 합쳐보기
+    private func transform() {
+        
         fetchUser()
         
         inputLoadButtonTapped.bind { _ in
@@ -44,23 +67,6 @@ class UserViewModel {
             let result = self.list.value.filter { $0.name.contains(value) }
             self.list.value = result
         }
-    }
-    
-    var numberOfRowsInSection: Int {
-        return list.value.count
-    }
-    
-    // indexPath.row 매개변수
-    func cellForRowAt(_ indexPath: IndexPath) -> User {
-        return list.value[indexPath.row]
-    }
-    
-    private func fetchUser() {
-        list.value = [User(name: "Madeline", age: 27),
-                      User(name: "Moana", age: 26),
-                      User(name: "Musk", age: 24),
-                      User(name: "A", age: 29),
-                      User(name: "B", age: 30)]
     }
     
     func appendUser(name: String?) {
