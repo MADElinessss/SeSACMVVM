@@ -19,6 +19,7 @@
 		C15B411E2B8D7B8D000B045D /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B411D2B8D7B8D000B045D /* DiaryRepository.swift */; };
 		C15B41202B8D8243000B045D /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B411F2B8D8243000B045D /* RealmViewController.swift */; };
 		C15B41222B8D84A5000B045D /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B41212B8D84A5000B045D /* RealmViewModel.swift */; };
+		C15B413A2B8DA23D000B045D /* RealmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B41392B8DA23D000B045D /* RealmDetailViewModel.swift */; };
 		C1BC9A202B86D8370083E181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A1F2B86D8370083E181 /* AppDelegate.swift */; };
 		C1BC9A222B86D8370083E181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A212B86D8370083E181 /* SceneDelegate.swift */; };
 		C1BC9A242B86D8370083E181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A232B86D8370083E181 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		C15B411D2B8D7B8D000B045D /* DiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
 		C15B411F2B8D8243000B045D /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
 		C15B41212B8D84A5000B045D /* RealmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewModel.swift; sourceTree = "<group>"; };
+		C15B41392B8DA23D000B045D /* RealmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDetailViewModel.swift; sourceTree = "<group>"; };
 		C1BC9A1C2B86D8370083E181 /* SeSACMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BC9A1F2B86D8370083E181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1BC9A212B86D8370083E181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				C15B41142B8D6E00000B045D /* FormatterManager.swift */,
 				C15B411D2B8D7B8D000B045D /* DiaryRepository.swift */,
 				C15B41212B8D84A5000B045D /* RealmViewModel.swift */,
+				C15B41392B8DA23D000B045D /* RealmDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				C1BC9A512B8844C90083E181 /* LoginViewModel.swift in Sources */,
 				C15B41222B8D84A5000B045D /* RealmViewModel.swift in Sources */,
 				C15B411C2B8D7AC1000B045D /* RealmModel.swift in Sources */,
+				C15B413A2B8DA23D000B045D /* RealmDetailViewModel.swift in Sources */,
 				C1BC9A3E2B86ED620083E181 /* NumberViewModel.swift in Sources */,
 				C132C14C2B8C35ED00C660FB /* Market.swift in Sources */,
 			);

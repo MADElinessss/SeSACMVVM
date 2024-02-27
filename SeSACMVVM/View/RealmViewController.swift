@@ -10,7 +10,6 @@ import UIKit
 
 class RealmViewController: UITableViewController {
     
-    let repository = DiaryRepository()
     let viewModel = RealmViewModel()
     
     var list: [Diary] = []
@@ -19,8 +18,11 @@ class RealmViewController: UITableViewController {
         super.viewDidLoad()
         
         viewModel.inputViewDidLoadTrigger.value = ()
-        list = viewModel.repository.fetchItem()
-        // list = repository.fetchItem()
+        
+        viewModel.outputList.bind { data in
+            self.list = data
+            self.tableView.reloadData()
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,12 +34,36 @@ class RealmViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "realmCell")!
         
-        cell.textLabel?.text = list[indexPath.row].name
-        cell.detailTextLabel?.text = list[indexPath.row].market
+        cell.textLabel?.text = viewModel.outputList.value[indexPath.row].name
+        cell.detailTextLabel?.text = viewModel.outputList.value[indexPath.row].market
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = RealmDetailViewController()
+        // vc.data = list
+        vc.viewModel.outputData.value = list
+        present(vc, animated: true)
+    }
 
+}
+
+class RealmDetailViewController: UIViewController {
+    
+    // var data: [Diary] = []
+    
+    let viewModel = RealmDetailViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // print(data)
+        // print(viewModel.outputData.value)
+        
+        view.backgroundColor = .orange
+    }
 }
