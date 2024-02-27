@@ -11,7 +11,7 @@ import UIKit
 class NetworkViewController: UITableViewController {
     
     let viewModel = NetworkViewModel()
-
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
@@ -39,6 +39,20 @@ class NetworkViewController: UITableViewController {
         cell.textLabel?.text = viewModel.outputMarketData.value[indexPath.row].korean_name
         cell.detailTextLabel?.text = viewModel.outputMarketData.value[indexPath.row].market
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = viewModel.outputMarketData.value[indexPath.row]
+        viewModel.inputCellDidSelectTrigger.value = item
+        
+        
+//        let item = viewModel.outputMarketData.value[indexPath.row]
+//        viewModel.repository.create(market: item.market, name: item.korean_name, price: Int.random(in: 100...100000))
+        
+        
+        
+        
     }
 
 }
