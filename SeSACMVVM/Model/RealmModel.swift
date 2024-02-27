@@ -10,7 +10,7 @@ import RealmSwift
 
 class Diary: Object {
     
-    @Persisted(primaryKey: true) var id: Int
+    @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var market: String
     @Persisted var name: String
     @Persisted var price: Int

@@ -20,7 +20,7 @@ class NetworkViewModel {
     
     // list
     var outputMarketData: Observable<[Market]> = Observable([])
-    
+
     var outputLabel = Observable("")
     
     init() {

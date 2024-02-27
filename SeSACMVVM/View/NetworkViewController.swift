@@ -22,6 +22,7 @@ class NetworkViewController: UITableViewController {
     }
     
     func bindData() {
+
         viewModel.outputMarketData.bind { market in
             self.tableView.reloadData()
         }
