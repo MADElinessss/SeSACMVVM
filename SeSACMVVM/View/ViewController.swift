@@ -25,7 +25,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        // 🎃 input + output 하나로 합쳐
+        viewModel.transition.bind { _ in
+            let vc = TestViewController()
+            self.present(vc, animated: true)
+        }
         
         // MARK: 1번
 //        viewModel.outputResult.bind {
@@ -57,12 +61,16 @@ class ViewController: UIViewController {
         // present(vc, animated: true)
         
         // viewmodel 활용해서 화면 전환
-        viewModel.inputNextButtonTappedTrigger.value = ()
+        // viewModel.inputNextButtonTappedTrigger.value = ()
         
-        viewModel.outputTransition.bind { _ in
-            let vc = TestViewController()
-            self.present(vc, animated: true)
-        }
+//        viewModel.outputTransition.bind { _ in
+//            let vc = TestViewController()
+//            self.present(vc, animated: true)
+//        }
+        
+        // 🎃
+        viewModel.transition.value = ()
+        
     }
 }
 

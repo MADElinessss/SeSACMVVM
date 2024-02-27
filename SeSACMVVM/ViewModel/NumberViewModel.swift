@@ -16,10 +16,13 @@ class NumberViewModel {
 //    }
     
     // MARK: next 버튼 누르면 TestVC로 화면전환
-    var inputNextButtonTappedTrigger: Observable<Void?> = Observable(nil)
+    //var inputNextButtonTappedTrigger: Observable<Void?> = Observable(nil)
     
     // 화면 전환 output
-    var outputTransition: Observable<Void?> = Observable(nil)
+    // var outputTransition: Observable<Void?> = Observable(nil)
+    
+    // 🎃 위에 input, output 세트를 하나로 해보자
+    var transition: Observable<Void?> = Observable(nil)
     
     var inputText = Observable("🐢")// 여기부터 다시해
     
@@ -31,10 +34,12 @@ class NumberViewModel {
             self.numberValidation(value)
         }
         
-        inputNextButtonTappedTrigger.bind { _ in
-            // 여기서 화면 전환하면 넘 좋겠따 근데 뷰모델은 UI몰라
-            self.outputTransition.value = ()
-        }
+//        inputNextButtonTappedTrigger.bind { _ in
+//            // 여기서 화면 전환하면 넘 좋겠따 근데 뷰모델은 UI몰라
+//            self.outputTransition.value = ()
+//        }
+        
+        
     }
     
     private func numberValidation(_ text: String) {
