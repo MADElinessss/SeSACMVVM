@@ -14,7 +14,7 @@ class NetworkViewModel {
     var inputViewDidLoadTrigger: Observable<Void?> = Observable(nil)
     
     // list
-    var ourpurMarketData: Observable<[Market]> = Observable([])
+    var outputMarketData: Observable<[Market]> = Observable([])
     
     var outputLabel = Observable("")
     
@@ -25,22 +25,11 @@ class NetworkViewModel {
     }
     
     func callRequest() {
-        let url = "https://api.upbit.com/v1/market/all"
         
-        AF.request(url).responseDecodable(of: [Market].self) { response in
-            switch response.result {
-            case .success(let success):
-                self.ourpurMarketData.value = success
-                self.outputLabel.value = success[0].korean_name
-            case .failure(let failure):
-                print("🚨")
-            }
+        APIService.shared.fetchUpbitMarketAPI { market in
+            self.outputMarketData.value = market
+            self.outputLabel.value = market[0].korean_name
         }
+        
     }
-    
-    
-    
-    
-    
-    
 }

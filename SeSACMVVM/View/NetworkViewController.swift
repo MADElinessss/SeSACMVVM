@@ -22,7 +22,7 @@ class NetworkViewController: UITableViewController {
     }
     
     func bindData() {
-        viewModel.ourpurMarketData.bind { market in
+        viewModel.outputMarketData.bind { market in
             self.tableView.reloadData()
         }
         viewModel.outputLabel.bind { value in
@@ -31,13 +31,13 @@ class NetworkViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.ourpurMarketData.value.count
+        return viewModel.outputMarketData.value.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "networkCell", for: indexPath)
-        cell.textLabel?.text = viewModel.ourpurMarketData.value[indexPath.row].korean_name
-        cell.detailTextLabel?.text = viewModel.ourpurMarketData.value[indexPath.row].market
+        cell.textLabel?.text = viewModel.outputMarketData.value[indexPath.row].korean_name
+        cell.detailTextLabel?.text = viewModel.outputMarketData.value[indexPath.row].market
         return cell
     }
 

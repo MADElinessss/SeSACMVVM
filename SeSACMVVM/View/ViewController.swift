@@ -49,5 +49,27 @@ class ViewController: UIViewController {
         
         viewModel.inputText.value = numberTextField.text!
     }
+    
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        // 기존 화면 전환 방식
+        // let vc = TestViewController()
+        // present(vc, animated: true)
+        
+        // viewmodel 활용해서 화면 전환
+        viewModel.inputNextButtonTappedTrigger.value = ()
+        
+        viewModel.outputTransition.bind { _ in
+            let vc = TestViewController()
+            self.present(vc, animated: true)
+        }
+    }
 }
 
+class TestViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .orange
+    }
+}
