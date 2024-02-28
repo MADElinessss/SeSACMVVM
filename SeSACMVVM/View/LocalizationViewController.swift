@@ -35,7 +35,9 @@ class LocalizationViewController: UIViewController {
         // let content = NSLocalizedString("alert_contents", comment: "")
         // let test = String(format: "저는 %@입니다.", nicknameTextField.text!)
         
-        let content = String(format: "alert_contents".local, nicknameTextField.text!)
+        // let content = String(format: "alert_contents".local, nicknameTextField.text!)
+        
+        let content = "alert_contents".localized(with: nicknameTextField.text!)
         
         let saveString = "alert_save".local
         let cancelString = "alert_cancel".local

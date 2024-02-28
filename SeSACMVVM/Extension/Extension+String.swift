@@ -22,5 +22,12 @@ extension String {
         
     }
     
+    func localized(with: String) -> String {
+        let result = NSLocalizedString(self, comment: "")
+        return String(format: self.local, with)
+    }
     
+    func localized(number: Int) -> String {
+        return String(format: self.local, number)
+    }
 }
