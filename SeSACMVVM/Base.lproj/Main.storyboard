@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Il-St-VIb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fNQ-YK-fU8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -324,6 +324,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqB-8D-aXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3051" y="4"/>
+        </scene>
+        <!--Localization View Controller-->
+        <scene sceneID="b7K-lg-SVp">
+            <objects>
+                <viewController id="fNQ-YK-fU8" customClass="LocalizationViewController" customModule="SeSACMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e6t-T0-Ia7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilZ-8x-AcK">
+                                <rect key="frame" x="16" y="161" width="362" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="40f-SN-b9y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjP-a5-07o">
+                                <rect key="frame" x="16" y="229" width="362" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="L6t-di-sCR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qff-4A-zNy">
+                                <rect key="frame" x="16" y="297" width="362" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NXO-px-8uF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRt-ND-ad2">
+                                <rect key="frame" x="16" y="385" width="362" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oPl-By-dYx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그아웃"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4Q-WC-oXM">
+                                <rect key="frame" x="16" y="453" width="362" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wiV-Ni-tR2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="닉네임" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-ip-hXr">
+                                <rect key="frame" x="16" y="103" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="89y-sN-Brz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i4Q-WC-oXM" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="1LY-NB-CZl"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="4DB-ip-hXr" secondAttribute="trailing" constant="16" id="8Tf-It-PWm"/>
+                            <constraint firstItem="qff-4A-zNy" firstAttribute="top" secondItem="QjP-a5-07o" secondAttribute="bottom" constant="24" id="9iM-aL-7DR"/>
+                            <constraint firstItem="QjP-a5-07o" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="Dh7-aV-zkM"/>
+                            <constraint firstItem="SRt-ND-ad2" firstAttribute="top" secondItem="qff-4A-zNy" secondAttribute="bottom" constant="44" id="KrG-Fu-M09"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="QjP-a5-07o" secondAttribute="trailing" constant="15" id="S9A-ut-F57"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="qff-4A-zNy" secondAttribute="trailing" constant="15" id="WNq-Ps-I6j"/>
+                            <constraint firstItem="ilZ-8x-AcK" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="YXo-1d-FSX"/>
+                            <constraint firstItem="ilZ-8x-AcK" firstAttribute="top" secondItem="4DB-ip-hXr" secondAttribute="bottom" constant="24" id="Zk2-S2-rEa"/>
+                            <constraint firstItem="qff-4A-zNy" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="eBC-TK-Yl1"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="ilZ-8x-AcK" secondAttribute="trailing" constant="15" id="g6x-Nv-pCq"/>
+                            <constraint firstItem="i4Q-WC-oXM" firstAttribute="top" secondItem="SRt-ND-ad2" secondAttribute="bottom" constant="24" id="h8O-KJ-kaR"/>
+                            <constraint firstItem="4DB-ip-hXr" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="lfw-0H-bBn"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="i4Q-WC-oXM" secondAttribute="trailing" constant="15" id="p86-ds-lMU"/>
+                            <constraint firstItem="SRt-ND-ad2" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="rh3-Zh-yn8"/>
+                            <constraint firstItem="QjP-a5-07o" firstAttribute="top" secondItem="ilZ-8x-AcK" secondAttribute="bottom" constant="24" id="sMg-Su-tnj"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="SRt-ND-ad2" secondAttribute="trailing" constant="15" id="wTw-Jn-eek"/>
+                            <constraint firstItem="4DB-ip-hXr" firstAttribute="top" secondItem="89y-sN-Brz" secondAttribute="top" constant="44" id="x6f-NS-0Yp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAA-p1-iQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3780.9160305343512" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

@@ -20,6 +20,7 @@
 		C15B41202B8D8243000B045D /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B411F2B8D8243000B045D /* RealmViewController.swift */; };
 		C15B41222B8D84A5000B045D /* RealmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B41212B8D84A5000B045D /* RealmViewModel.swift */; };
 		C15B413A2B8DA23D000B045D /* RealmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B41392B8DA23D000B045D /* RealmDetailViewModel.swift */; };
+		C15B419E2B8EBE6B000B045D /* LocalizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B419D2B8EBE6B000B045D /* LocalizationViewController.swift */; };
 		C1BC9A202B86D8370083E181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A1F2B86D8370083E181 /* AppDelegate.swift */; };
 		C1BC9A222B86D8370083E181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A212B86D8370083E181 /* SceneDelegate.swift */; };
 		C1BC9A242B86D8370083E181 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC9A232B86D8370083E181 /* ViewController.swift */; };
@@ -46,6 +47,14 @@
 		C15B411F2B8D8243000B045D /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
 		C15B41212B8D84A5000B045D /* RealmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewModel.swift; sourceTree = "<group>"; };
 		C15B41392B8DA23D000B045D /* RealmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDetailViewModel.swift; sourceTree = "<group>"; };
+		C15B419D2B8EBE6B000B045D /* LocalizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationViewController.swift; sourceTree = "<group>"; };
+		C15B419F2B8EBFD7000B045D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		C15B41A02B8EBFD7000B045D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C15B41A12B8EC010000B045D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		C15B41A22B8EC011000B045D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C15B41A32B8EC025000B045D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		C15B41A42B8EC025000B045D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C15B41A62B8EC08E000B045D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C1BC9A1C2B86D8370083E181 /* SeSACMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BC9A1F2B86D8370083E181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1BC9A212B86D8370083E181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +137,7 @@
 				C1BC9A4E2B883A230083E181 /* LoginViewController.swift */,
 				C132C1462B8C2C8500C660FB /* NetworkViewController.swift */,
 				C15B411F2B8D8243000B045D /* RealmViewController.swift */,
+				C15B419D2B8EBE6B000B045D /* LocalizationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +205,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
+				ar,
+				ja,
 			);
 			mainGroup = C1BC9A132B86D8370083E181;
 			packageReferences = (
@@ -240,6 +253,7 @@
 				C1BC9A352B86E2840083E181 /* UserTableViewController.swift in Sources */,
 				C1BC9A372B86E3980083E181 /* User.swift in Sources */,
 				C15B41132B8D682F000B045D /* APIService.swift in Sources */,
+				C15B419E2B8EBE6B000B045D /* LocalizationViewController.swift in Sources */,
 				C1BC9A222B86D8370083E181 /* SceneDelegate.swift in Sources */,
 				C132C14E2B8C37AF00C660FB /* NetworkViewModel.swift in Sources */,
 				C1BC9A512B8844C90083E181 /* LoginViewModel.swift in Sources */,
@@ -258,6 +272,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				C1BC9A262B86D8370083E181 /* Base */,
+				C15B419F2B8EBFD7000B045D /* ko */,
+				C15B41A12B8EC010000B045D /* ar */,
+				C15B41A32B8EC025000B045D /* ja */,
+				C15B41A62B8EC08E000B045D /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -266,6 +284,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				C1BC9A2B2B86D8390083E181 /* Base */,
+				C15B41A02B8EBFD7000B045D /* ko */,
+				C15B41A22B8EC011000B045D /* ar */,
+				C15B41A42B8EC025000B045D /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -278,6 +299,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -341,6 +363,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
