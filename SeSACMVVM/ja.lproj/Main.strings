@@ -1,4 +1,7 @@
 
+// LocalizationViewController - 해치웠나 버튼
+"sle-yq-BCW.configuration.title" = "해치웠나데스?";
+
 /* Class = "UITextField"; text = "닉네임"; ObjectID = "4DB-ip-hXr"; */
 "4DB-ip-hXr.text" = "닉네임";
 

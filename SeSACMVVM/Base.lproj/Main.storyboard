@@ -375,12 +375,23 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="justButtonTapped:" destination="fNQ-YK-fU8" eventType="touchUpInside" id="NGF-z6-mMD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="닉네임" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-ip-hXr">
                                 <rect key="frame" x="16" y="103" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-yq-BCW">
+                                <rect key="frame" x="16" y="521" width="361" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ex9-Wb-kL3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="해치웠나"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="89y-sN-Brz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -391,6 +402,7 @@
                             <constraint firstItem="QjP-a5-07o" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="Dh7-aV-zkM"/>
                             <constraint firstItem="SRt-ND-ad2" firstAttribute="top" secondItem="qff-4A-zNy" secondAttribute="bottom" constant="44" id="KrG-Fu-M09"/>
                             <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="QjP-a5-07o" secondAttribute="trailing" constant="15" id="S9A-ut-F57"/>
+                            <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="sle-yq-BCW" secondAttribute="trailing" constant="16" id="Vil-Fb-nZL"/>
                             <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="qff-4A-zNy" secondAttribute="trailing" constant="15" id="WNq-Ps-I6j"/>
                             <constraint firstItem="ilZ-8x-AcK" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="YXo-1d-FSX"/>
                             <constraint firstItem="ilZ-8x-AcK" firstAttribute="top" secondItem="4DB-ip-hXr" secondAttribute="bottom" constant="24" id="Zk2-S2-rEa"/>
@@ -401,10 +413,21 @@
                             <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="i4Q-WC-oXM" secondAttribute="trailing" constant="15" id="p86-ds-lMU"/>
                             <constraint firstItem="SRt-ND-ad2" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="rh3-Zh-yn8"/>
                             <constraint firstItem="QjP-a5-07o" firstAttribute="top" secondItem="ilZ-8x-AcK" secondAttribute="bottom" constant="24" id="sMg-Su-tnj"/>
+                            <constraint firstItem="sle-yq-BCW" firstAttribute="top" secondItem="i4Q-WC-oXM" secondAttribute="bottom" constant="24" id="svV-BT-emW"/>
+                            <constraint firstItem="sle-yq-BCW" firstAttribute="leading" secondItem="89y-sN-Brz" secondAttribute="leading" constant="16" id="tL2-qS-wK8"/>
                             <constraint firstItem="89y-sN-Brz" firstAttribute="trailing" secondItem="SRt-ND-ad2" secondAttribute="trailing" constant="15" id="wTw-Jn-eek"/>
                             <constraint firstItem="4DB-ip-hXr" firstAttribute="top" secondItem="89y-sN-Brz" secondAttribute="top" constant="44" id="x6f-NS-0Yp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="isDoneButton" destination="sle-yq-BCW" id="Bpq-tm-2z5"/>
+                        <outlet property="justButton" destination="i4Q-WC-oXM" id="7ev-LS-4wk"/>
+                        <outlet property="logoutButton" destination="SRt-ND-ad2" id="y47-3x-eja"/>
+                        <outlet property="nicknameTextField" destination="4DB-ip-hXr" id="srY-dg-xSy"/>
+                        <outlet property="profileLabel" destination="ilZ-8x-AcK" id="3R6-RL-4cj"/>
+                        <outlet property="settingLabel" destination="QjP-a5-07o" id="YeJ-a6-2C6"/>
+                        <outlet property="textLabel" destination="qff-4A-zNy" id="0AB-v6-HEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAA-p1-iQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
